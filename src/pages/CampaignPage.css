@@ -1,0 +1,442 @@
+.campaign-page {
+  min-height: 75vh;
+  overflow-x: clip;
+}
+
+.campaign-notice-strip {
+  background-color: var(--color-butter-cream);
+  border-bottom: 1.5px solid var(--color-plum-cocoa);
+  padding-block: 0.65rem;
+}
+
+.campaign-notice-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-size: 0.86rem;
+  color: var(--color-plum-cocoa);
+  text-align: center;
+}
+
+.campaign-hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.campaign-hero-grid > * {
+  min-width: 0;
+}
+
+.campaign-lockup-pill {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-soft-lavender);
+  border: 1.5px solid var(--color-plum-cocoa);
+  margin-bottom: 1.35rem;
+}
+
+.lockup-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.lockup-x {
+  color: var(--color-cherry-blush);
+  font-weight: 800;
+}
+
+.lockup-partner {
+  font-weight: 800;
+}
+
+.lockup-tag {
+  padding: 0.16rem 0.6rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-butter-cream);
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.campaign-title {
+  font-size: clamp(2.45rem, 4.9vw, 3.85rem);
+  font-weight: 700;
+  margin-bottom: 1.15rem;
+}
+
+.campaign-intro {
+  font-size: 1.03rem;
+  color: var(--text-muted);
+  line-height: 1.72;
+  max-width: 38rem;
+  margin-bottom: 1.85rem;
+}
+
+.campaign-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.campaign-photo-card {
+  border-radius: var(--radius-xl);
+  padding: 0.7rem;
+  background-color: var(--color-soft-lavender);
+  border: 1.5px solid var(--color-plum-cocoa);
+  box-shadow: 10px 12px 0 var(--color-cherry-blush);
+}
+
+.campaign-photo {
+  width: 100%;
+  aspect-ratio: 4 / 4;
+  object-fit: cover;
+  border-radius: 1.45rem;
+}
+
+.campaign-photo-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 0.5rem 0.2rem;
+}
+
+.campaign-photo-note span {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.campaign-photo-note strong {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Co-Branded Drinks Grid */
+.campaign-collection-band {
+  background-color: var(--color-soft-lavender);
+  border-block: 1.5px solid rgba(73, 48, 82, 0.12);
+}
+
+.campaign-drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.campaign-drink-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background-color: var(--color-milky-bg);
+  border: 1.5px solid var(--color-plum-cocoa);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-soft);
+}
+
+.campaign-drink-img-wrap {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-bottom: 1.5px solid rgba(73, 48, 82, 0.14);
+}
+
+.campaign-drink-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.campaign-drink-mood {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  border: 1.25px solid var(--color-plum-cocoa);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.campaign-drink-body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.55rem;
+}
+
+.campaign-drink-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.campaign-drink-head h3 {
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.campaign-drink-price {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.16rem 0.55rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-butter-cream);
+  border: 1px solid var(--color-plum-cocoa);
+  flex-shrink: 0;
+}
+
+.campaign-drink-desc {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.campaign-drink-edition {
+  padding-top: 0.55rem;
+  border-top: 1px dashed rgba(73, 48, 82, 0.2);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-plum-cocoa);
+}
+
+/* 5 Mood Recommendations */
+.campaign-moods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.campaign-mood-row {
+  padding: 1.2rem 1.45rem;
+  border-radius: var(--radius-lg);
+  border: 1.5px solid var(--color-plum-cocoa);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  box-shadow: 0 6px 18px rgba(73, 48, 82, 0.06);
+}
+
+.campaign-mood-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.campaign-mood-emoji {
+  width: 2.85rem;
+  height: 2.85rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-milky-bg);
+  border: 1.5px solid var(--color-plum-cocoa);
+  display: grid;
+  place-items: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.campaign-mood-left h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.15rem;
+}
+
+.campaign-mood-left p {
+  font-size: 0.92rem;
+  color: rgba(73, 48, 82, 0.85);
+}
+
+.campaign-mood-link {
+  background-color: var(--color-milky-bg);
+}
+
+/* Retail & Packaging Split */
+.campaign-retail-band {
+  background: linear-gradient(180deg, rgba(248, 212, 196, 0.25) 0%, rgba(240, 233, 255, 0.45) 100%);
+}
+
+.campaign-split-blocks {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3.25rem);
+}
+
+.campaign-split-blocks > * {
+  min-width: 0;
+}
+
+.campaign-stack-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.campaign-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.2rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-milky-bg);
+  border: 1.5px solid rgba(73, 48, 82, 0.18);
+  box-shadow: var(--shadow-soft);
+}
+
+.campaign-card-icon {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-plum-cocoa);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.campaign-card-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-bottom: 0.2rem;
+}
+
+.campaign-info-card h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.campaign-info-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* Social Media Campaign */
+.campaign-social-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.campaign-social-card {
+  padding: 1.55rem;
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--color-plum-cocoa);
+  box-shadow: 6px 8px 0 rgba(73, 48, 82, 0.14);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.social-format {
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-milky-bg);
+  border: 1px solid var(--color-plum-cocoa);
+  width: fit-content;
+}
+
+.social-handle {
+  font-size: 1.45rem;
+}
+
+.campaign-social-card p {
+  font-size: 0.92rem;
+  color: rgba(73, 48, 82, 0.86);
+  line-height: 1.58;
+}
+
+/* Closing Card */
+.campaign-cta-section {
+  padding-top: 0.5rem;
+}
+
+.campaign-closing-card {
+  border-radius: var(--radius-xl);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  background-color: var(--color-plum-cocoa);
+  color: var(--color-milky-bg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+  box-shadow: 10px 12px 0 var(--color-matcha-mint);
+}
+
+.campaign-closing-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-butter-cream);
+  color: var(--color-plum-cocoa);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.campaign-closing-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-milky-bg);
+}
+
+.campaign-closing-desc {
+  max-width: 34rem;
+  color: rgba(255, 250, 245, 0.85);
+}
+
+.campaign-closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 1120px) {
+  .campaign-drinks-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 920px) {
+  .campaign-hero-grid,
+  .campaign-split-blocks,
+  .campaign-social-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .campaign-drinks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .campaign-photo-card,
+  .campaign-closing-card {
+    box-shadow: 6px 8px 0 var(--color-cherry-blush);
+  }
+}

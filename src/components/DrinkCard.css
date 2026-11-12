@@ -1,0 +1,168 @@
+.drink-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface-elevated);
+  border: 1.5px solid rgba(73, 48, 82, 0.16);
+  box-shadow: var(--shadow-soft);
+  transition: box-shadow 0.3s var(--ease-smooth), border-color 0.3s var(--ease-smooth);
+}
+
+.drink-card:hover {
+  border-color: var(--color-plum-cocoa);
+  box-shadow: 8px 10px 0 var(--color-soft-lavender);
+}
+
+.drink-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background-color: var(--color-soft-lavender);
+  border-bottom: 1.5px solid rgba(73, 48, 82, 0.12);
+}
+
+.drink-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s var(--ease-smooth);
+}
+
+.drink-card:hover .drink-img {
+  transform: scale(1.06);
+}
+
+.drink-badge,
+.drink-mood-tag {
+  position: absolute;
+  top: 0.85rem;
+  padding: 0.32rem 0.78rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--color-plum-cocoa);
+  border: 1.25px solid var(--color-plum-cocoa);
+}
+
+.drink-badge {
+  left: 0.85rem;
+  background: rgba(255, 250, 245, 0.94);
+}
+
+.drink-mood-tag {
+  right: 0.85rem;
+}
+
+.drink-body {
+  padding: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.78rem;
+}
+
+.drink-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.65rem;
+}
+
+.drink-name {
+  font-size: 1.32rem;
+  font-weight: 700;
+}
+
+.drink-price {
+  font-size: 0.96rem;
+  font-weight: 800;
+  color: var(--color-plum-cocoa);
+  background-color: var(--color-butter-cream);
+  border: 1.25px solid var(--color-plum-cocoa);
+  padding: 0.22rem 0.68rem;
+  border-radius: var(--radius-pill);
+  flex-shrink: 0;
+}
+
+.drink-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  flex: 1;
+}
+
+.drink-ingredients-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.drink-ingredients-label {
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-muted);
+}
+
+.drink-notes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.drink-note-chip {
+  padding: 0.25rem 0.68rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-soft-lavender);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--color-plum-cocoa);
+}
+
+.drink-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.8rem;
+  border-top: 1px dashed rgba(73, 48, 82, 0.18);
+  gap: 0.6rem;
+}
+
+.drink-volume {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.drink-add-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.52rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--color-plum-cocoa);
+  background-color: var(--color-milky-bg);
+  color: var(--color-plum-cocoa);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color 0.2s var(--ease-smooth),
+    color 0.2s var(--ease-smooth),
+    transform 0.2s var(--ease-smooth),
+    box-shadow 0.2s var(--ease-smooth);
+}
+
+.drink-add-btn:hover {
+  background-color: var(--color-cherry-blush);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 var(--color-plum-cocoa);
+}
+
+.drink-add-btn--added {
+  background-color: var(--color-matcha-mint);
+  color: var(--color-plum-cocoa);
+  box-shadow: 0 3px 0 var(--color-plum-cocoa);
+}

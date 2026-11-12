@@ -1,0 +1,299 @@
+.about-page {
+  min-height: 75vh;
+  overflow-x: clip;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.about-hero-grid > * {
+  min-width: 0;
+}
+
+.about-eyebrow-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.95rem;
+}
+
+.about-eyebrow {
+  margin-bottom: 0;
+}
+
+.about-hand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-plum-cocoa);
+  transform: rotate(-1.5deg);
+}
+
+.about-main-title {
+  font-size: clamp(2.45rem, 4.8vw, 3.85rem);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.about-story-block h2 {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-plum-cocoa);
+  margin-bottom: 0.6rem;
+}
+
+.about-story-block p {
+  font-size: 1.02rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+.about-photo-frame {
+  border-radius: var(--radius-xl);
+  padding: 0.7rem;
+  background-color: var(--color-soft-lavender);
+  border: 1.5px solid var(--color-plum-cocoa);
+  box-shadow: 10px 12px 0 var(--color-peach-sorbet);
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 1.45rem;
+}
+
+.about-photo-caption {
+  display: inline-block;
+  margin-top: 0.65rem;
+  margin-left: 0.4rem;
+  font-size: 1.28rem;
+  font-weight: 700;
+}
+
+/* Philosophy Band */
+.about-band-lavender {
+  background-color: var(--color-soft-lavender);
+  border-block: 1.5px solid rgba(73, 48, 82, 0.12);
+}
+
+.about-philosophy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.35rem;
+}
+
+.about-philosophy-card {
+  padding: 1.65rem;
+  border-radius: var(--radius-xl);
+  border: 1.5px solid var(--color-plum-cocoa);
+  box-shadow: 6px 8px 0 rgba(73, 48, 82, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.philosophy-num {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-grid;
+  place-items: center;
+  width: 2.3rem;
+  height: 2.3rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-milky-bg);
+  border: 1.5px solid var(--color-plum-cocoa);
+}
+
+.philosophy-quote {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.philosophy-detail {
+  font-size: 0.94rem;
+  color: rgba(73, 48, 82, 0.85);
+  line-height: 1.6;
+}
+
+/* Personality Grid */
+.about-personality-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.personality-card {
+  padding: 1.35rem 1.15rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-elevated);
+  border: 1.5px solid rgba(73, 48, 82, 0.16);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.personality-pill {
+  display: inline-block;
+  width: fit-content;
+  padding: 0.32rem 0.85rem;
+  border-radius: var(--radius-pill);
+  border: 1.25px solid var(--color-plum-cocoa);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.personality-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* Mood Collection Band */
+.about-collection-band {
+  background: linear-gradient(180deg, rgba(240, 233, 255, 0.45) 0%, transparent 100%);
+}
+
+.about-collection-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.about-collection-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+/* Values Grid */
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.value-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--surface-elevated);
+  border: 1.5px solid rgba(73, 48, 82, 0.16);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.value-icon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-plum-cocoa);
+  display: grid;
+  place-items: center;
+}
+
+.value-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.value-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.58;
+}
+
+/* Closing CTA */
+.about-cta-wrap {
+  padding-top: 1rem;
+}
+
+.about-closing-cta {
+  border-radius: var(--radius-xl);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  background-color: var(--color-plum-cocoa);
+  color: var(--color-milky-bg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 10px 12px 0 var(--color-cherry-blush);
+}
+
+.about-cta-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-butter-cream);
+  color: var(--color-plum-cocoa);
+  display: grid;
+  place-items: center;
+}
+
+.about-closing-title {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  color: var(--color-milky-bg);
+}
+
+.about-closing-desc {
+  max-width: 36rem;
+  color: rgba(255, 250, 245, 0.84);
+  font-size: 1rem;
+}
+
+.about-closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1080px) {
+  .about-personality-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .about-values-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 920px) {
+  .about-hero-grid,
+  .about-philosophy-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-collection-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .about-personality-grid,
+  .about-collection-grid,
+  .about-values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo-frame,
+  .about-closing-cta {
+    box-shadow: 6px 8px 0 var(--color-peach-sorbet);
+  }
+}

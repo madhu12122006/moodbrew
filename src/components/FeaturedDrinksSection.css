@@ -1,0 +1,34 @@
+.featured-top-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.featured-header {
+  margin-bottom: 0;
+}
+
+.drinks-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+@media (max-width: 1120px) {
+  .drinks-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .featured-top-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .drinks-grid {
+    grid-template-columns: 1fr;
+  }
+}

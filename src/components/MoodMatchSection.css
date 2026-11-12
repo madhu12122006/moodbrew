@@ -1,0 +1,148 @@
+.moodmatch-section {
+  overflow-x: clip;
+}
+
+.moodmatch-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  padding: clamp(1.85rem, 4.5vw, 3.5rem);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.75rem, 4vw, 3.25rem);
+  align-items: center;
+  background-color: var(--color-soft-lavender);
+  border: 1.5px solid var(--color-plum-cocoa);
+  box-shadow: 10px 12px 0 var(--color-dreamy-lilac);
+}
+
+.moodmatch-banner > * {
+  min-width: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.moodmatch-orb {
+  position: absolute !important;
+  z-index: 0 !important;
+  border-radius: 50%;
+  border: 1.5px solid rgba(73, 48, 82, 0.14);
+  pointer-events: none;
+}
+
+.moodmatch-orb--mint {
+  width: 6.5rem;
+  height: 6.5rem;
+  top: -1.75rem;
+  right: 28%;
+  background-color: var(--color-matcha-mint);
+  opacity: 0.7;
+}
+
+.moodmatch-orb--butter {
+  width: 4.5rem;
+  height: 4.5rem;
+  bottom: -1.25rem;
+  left: 38%;
+  background-color: var(--color-butter-cream);
+  opacity: 0.8;
+}
+
+.moodmatch-eyebrow-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.95rem;
+}
+
+.moodmatch-badge {
+  margin-bottom: 0;
+  background-color: var(--color-milky-bg);
+}
+
+.moodmatch-hand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-plum-cocoa);
+  transform: rotate(-2deg);
+}
+
+.moodmatch-title {
+  font-size: clamp(1.95rem, 3.5vw, 2.85rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.moodmatch-desc {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  max-width: 32rem;
+  margin-bottom: 1.85rem;
+}
+
+.moodmatch-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.15rem;
+}
+
+.moodmatch-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  color: var(--color-plum-cocoa);
+}
+
+.moodmatch-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.moodmatch-step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-milky-bg);
+  border: 1.5px solid rgba(73, 48, 82, 0.2);
+}
+
+.step-num {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-plum-cocoa);
+  border: 1.5px solid var(--color-plum-cocoa);
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: var(--radius-pill);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.moodmatch-step-card h3 {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.moodmatch-step-card p {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 920px) {
+  .moodmatch-banner {
+    grid-template-columns: 1fr;
+    box-shadow: 6px 8px 0 var(--color-dreamy-lilac);
+  }
+}

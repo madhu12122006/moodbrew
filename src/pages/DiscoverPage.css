@@ -1,0 +1,362 @@
+.discover-page {
+  min-height: 75vh;
+  padding-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+.discover-hero-header {
+  max-width: 44rem;
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+}
+
+.discover-eyebrow-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.95rem;
+}
+
+.discover-eyebrow {
+  margin-bottom: 0;
+  background-color: var(--color-butter-cream);
+}
+
+.discover-hand {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--color-plum-cocoa);
+  transform: rotate(-1.5deg);
+}
+
+.discover-title {
+  font-size: clamp(2.45rem, 5vw, 3.85rem);
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.discover-subtitle {
+  font-size: clamp(1.05rem, 1.6vw, 1.22rem);
+  color: var(--text-muted);
+}
+
+/* 5-Card Bento Mood Grid */
+.moodmatch-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.moodmatch-card {
+  grid-column: span 2;
+  position: relative;
+  text-align: left;
+  padding: 1.25rem;
+  border-radius: var(--radius-xl);
+  border: 1.5px solid rgba(73, 48, 82, 0.18);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-shadow: var(--shadow-soft);
+  transition:
+    border-color 0.25s var(--ease-smooth),
+    box-shadow 0.25s var(--ease-smooth);
+}
+
+.moodmatch-card:nth-child(4),
+.moodmatch-card:nth-child(5) {
+  grid-column: span 3;
+}
+
+.moodmatch-card:hover {
+  border-color: var(--color-plum-cocoa);
+  box-shadow: 0 18px 34px rgba(73, 48, 82, 0.14);
+}
+
+.moodmatch-card--selected {
+  border: 2.5px solid var(--color-plum-cocoa);
+  box-shadow: 7px 9px 0 var(--color-plum-cocoa);
+}
+
+.moodmatch-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.moodmatch-emoji-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-pill);
+  border: 1.25px solid var(--color-plum-cocoa);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.moodmatch-selected-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-plum-cocoa);
+  color: var(--color-milky-bg);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.moodmatch-card-body {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex: 1;
+}
+
+.moodmatch-card-photo-wrap {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1.5px solid var(--color-plum-cocoa);
+  background-color: var(--color-milky-bg);
+  flex-shrink: 0;
+}
+
+.moodmatch-card-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s var(--ease-smooth);
+}
+
+.moodmatch-card:hover .moodmatch-card-photo {
+  transform: scale(1.07);
+}
+
+.moodmatch-card-copy {
+  min-width: 0;
+}
+
+.moodmatch-card-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.moodmatch-card-desc {
+  font-size: 0.92rem;
+  line-height: 1.48;
+  color: rgba(73, 48, 82, 0.86);
+}
+
+.moodmatch-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px dashed rgba(73, 48, 82, 0.24);
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.moodmatch-card-drink-name {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* Recommendation Prompt & Reveal Panel */
+.discover-prompt-cue {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: var(--radius-xl);
+  background-color: var(--color-soft-lavender);
+  border: 1.5px dashed rgba(73, 48, 82, 0.3);
+  text-align: center;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.recommendation-shell {
+  margin-top: 2.25rem;
+}
+
+.recommendation-card {
+  border-radius: 2rem;
+  padding: clamp(1.5rem, 4vw, 2.75rem);
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: center;
+  background: linear-gradient(145deg, var(--color-milky-bg) 0%, var(--color-soft-lavender) 100%);
+  border: 1.5px solid var(--color-plum-cocoa);
+  box-shadow: 10px 12px 0 var(--color-dreamy-lilac);
+}
+
+.recommendation-card > * {
+  min-width: 0;
+}
+
+.recommendation-media {
+  position: relative;
+  border-radius: 1.65rem;
+  padding: 0.65rem;
+  border: 1.5px solid var(--color-plum-cocoa);
+  box-shadow: var(--shadow-soft);
+}
+
+.recommendation-img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 1.25rem;
+}
+
+.recommendation-mood-pill {
+  position: absolute;
+  top: 1.35rem;
+  left: 1.35rem;
+  padding: 0.38rem 0.9rem;
+  border-radius: var(--radius-pill);
+  background-color: rgba(255, 250, 245, 0.94);
+  border: 1.25px solid var(--color-plum-cocoa);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.recommendation-price-pill {
+  position: absolute;
+  bottom: 1.35rem;
+  right: 1.35rem;
+  padding: 0.42rem 0.95rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-butter-cream);
+  border: 1.5px solid var(--color-plum-cocoa);
+  font-size: 1.05rem;
+  font-weight: 800;
+  box-shadow: 0 4px 0 var(--color-plum-cocoa);
+}
+
+.recommendation-microcopy {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-plum-cocoa);
+  margin-bottom: 0.35rem;
+  transform: rotate(-1deg);
+}
+
+.recommendation-title-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.recommendation-title {
+  font-size: clamp(2rem, 3.6vw, 2.85rem);
+  font-weight: 700;
+}
+
+.recommendation-meta {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.recommendation-desc {
+  font-size: 1.04rem;
+  color: var(--text-muted);
+  line-height: 1.68;
+  margin-bottom: 1.5rem;
+}
+
+.recommendation-ingredients-block {
+  margin-bottom: 1.85rem;
+}
+
+.recommendation-ingredients-label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-plum-cocoa);
+  margin-bottom: 0.65rem;
+}
+
+.recommendation-ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.recommendation-ingredient-chip {
+  padding: 0.38rem 0.88rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-milky-bg);
+  border: 1.25px solid rgba(73, 48, 82, 0.22);
+  font-size: 0.84rem;
+  font-weight: 600;
+}
+
+.recommendation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.recommendation-cart-btn--added {
+  background-color: var(--color-matcha-mint);
+}
+
+@media (max-width: 1024px) {
+  .moodmatch-cards-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .moodmatch-card,
+  .moodmatch-card:nth-child(4),
+  .moodmatch-card:nth-child(5) {
+    grid-column: span 1;
+  }
+
+  .moodmatch-card:nth-child(5) {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 860px) {
+  .recommendation-card {
+    grid-template-columns: 1fr;
+    box-shadow: 6px 8px 0 var(--color-dreamy-lilac);
+  }
+}
+
+@media (max-width: 640px) {
+  .moodmatch-cards-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .moodmatch-card,
+  .moodmatch-card:nth-child(4),
+  .moodmatch-card:nth-child(5) {
+    grid-column: span 1;
+  }
+
+  .moodmatch-card-photo-wrap {
+    width: 4.75rem;
+    height: 4.75rem;
+  }
+}

@@ -1,0 +1,142 @@
+.collab-section {
+  overflow-x: clip;
+}
+
+.collab-card {
+  border-radius: var(--radius-xl);
+  padding: clamp(1.85rem, 4.5vw, 3.35rem);
+  background-color: var(--color-plum-cocoa);
+  color: var(--color-milky-bg);
+  border: 1.5px solid var(--color-plum-cocoa);
+  box-shadow: 10px 12px 0 var(--color-peach-sorbet);
+}
+
+.collab-top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.collab-disclaimer {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.48rem 1rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-butter-cream);
+  color: var(--color-plum-cocoa);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.collab-hand {
+  font-size: 1.35rem;
+  color: var(--color-butter-cream);
+}
+
+.collab-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: clamp(1.75rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.collab-grid > * {
+  min-width: 0;
+}
+
+.collab-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.45rem 1.05rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-soft-lavender);
+  color: var(--color-plum-cocoa);
+  margin-bottom: 1.15rem;
+}
+
+.lockup-brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--color-plum-cocoa);
+}
+
+.lockup-times {
+  color: var(--color-cherry-blush);
+  font-weight: 800;
+}
+
+.lockup-partner {
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.collab-heading {
+  font-size: clamp(2.05rem, 3.8vw, 3rem);
+  font-weight: 700;
+  color: var(--color-milky-bg);
+  margin-bottom: 0.95rem;
+}
+
+.collab-description {
+  color: rgba(255, 250, 245, 0.85);
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 34rem;
+}
+
+.collab-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.collab-highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.95rem;
+  padding: 1.05rem 1.2rem;
+  border-radius: var(--radius-lg);
+  background-color: rgba(255, 250, 245, 0.08);
+  border: 1px solid rgba(255, 250, 245, 0.18);
+}
+
+.collab-icon {
+  width: 2.45rem;
+  height: 2.45rem;
+  border-radius: var(--radius-md);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  color: var(--color-plum-cocoa);
+}
+
+.collab-highlight-item h3 {
+  font-family: var(--font-body);
+  font-size: 0.98rem;
+  font-weight: 700;
+  color: var(--color-milky-bg);
+  margin-bottom: 0.2rem;
+}
+
+.collab-highlight-item p {
+  font-size: 0.88rem;
+  color: rgba(255, 250, 245, 0.8);
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .collab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .collab-card {
+    box-shadow: 6px 8px 0 var(--color-peach-sorbet);
+  }
+}

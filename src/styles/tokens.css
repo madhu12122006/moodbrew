@@ -1,0 +1,60 @@
+:root {
+  /* Core MoodBrew Palette */
+  --color-dreamy-lilac: #B89AF5;
+  --color-cherry-blush: #FF8FA3;
+  --color-butter-cream: #FFF0B8;
+  --color-matcha-mint: #B8E5D2;
+  --color-peach-sorbet: #F8D4C4;
+  --color-plum-cocoa: #493052;
+  --color-milky-bg: #FFFAF5;
+  --color-soft-lavender: #F0E9FF;
+
+  /* Semantic Surface & Text Tokens */
+  --surface-base: var(--color-milky-bg);
+  --surface-soft: var(--color-soft-lavender);
+  --surface-tint: var(--color-peach-sorbet);
+  --surface-elevated: #FFFFFF;
+
+  --text-primary: var(--color-plum-cocoa);
+  --text-muted: rgba(73, 48, 82, 0.76);
+  --border-subtle: rgba(73, 48, 82, 0.14);
+  --border-lilac: rgba(184, 154, 245, 0.45);
+
+  --accent-primary: var(--color-dreamy-lilac);
+  --accent-cta: var(--color-cherry-blush);
+  --accent-highlight: var(--color-butter-cream);
+  --accent-fresh: var(--color-matcha-mint);
+
+  /* Typography */
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-hand: 'Caveat', cursive;
+
+  /* Radii & Spacing */
+  --radius-sm: 0.625rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-pill: 9999px;
+
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+
+  /* Motion */
+  --ease-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Surfaces & Elevation */
+  --glass-bg: rgba(255, 250, 245, 0.82);
+  --glass-bg-strong: rgba(255, 250, 245, 0.94);
+  --glass-border: rgba(73, 48, 82, 0.13);
+  --shadow-soft: 0 12px 32px rgba(73, 48, 82, 0.07);
+  --shadow-card: 0 20px 44px rgba(73, 48, 82, 0.11);
+  --shadow-accent: 0 14px 30px rgba(255, 143, 163, 0.32);
+
+  /* Layout */
+  --container-max: 76rem;
+  --nav-height: 4.75rem;
+}
