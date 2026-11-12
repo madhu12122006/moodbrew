@@ -185,6 +185,63 @@ a {
   border-color: var(--color-plum-cocoa);
 }
 
+/* Shared Form Controls & Loading Spinner */
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.form-field label {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--color-plum-cocoa);
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  width: 100%;
+  padding: 0.82rem 1rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid rgba(73, 48, 82, 0.24);
+  background-color: var(--color-milky-bg);
+  font-size: 0.95rem;
+  transition:
+    border-color 0.2s var(--ease-smooth),
+    background-color 0.2s var(--ease-smooth);
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+  border-color: var(--color-plum-cocoa);
+  background-color: var(--surface-elevated);
+}
+
+.form-field input.input-invalid,
+.form-field textarea.input-invalid,
+.form-field select.input-invalid {
+  border-color: #b52457;
+  background-color: #fff4f6;
+}
+
+.field-error {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #9e214d;
+}
+
+.spin-icon {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

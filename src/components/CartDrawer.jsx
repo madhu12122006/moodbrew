@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import {
   X,
@@ -6,7 +6,6 @@ import {
   Minus,
   Trash2,
   ShoppingBag,
-  CheckCircle2,
   Sparkles,
   ArrowRight,
 } from 'lucide-react';
@@ -39,12 +38,9 @@ export default function CartDrawer() {
     setIsOpen,
     updateQuantity,
     removeItem,
-    clearCart,
     count,
     subtotal,
   } = useCart();
-  const [checkedOut, setCheckedOut] = useState(false);
-  const [orderSummary, setOrderSummary] = useState({ count: 0, total: 0 });
   const closeBtnRef = useRef(null);
   const previousFocusRef = useRef(null);
   const navigate = useNavigate();
@@ -63,7 +59,6 @@ export default function CartDrawer() {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
         setIsOpen(false);
-        setCheckedOut(false);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
@@ -79,19 +74,16 @@ export default function CartDrawer() {
 
   const handleClose = () => {
     setIsOpen(false);
-    setCheckedOut(false);
   };
 
   const handleContinueShopping = () => {
     setIsOpen(false);
-    setCheckedOut(false);
     navigate('/menu');
   };
 
-  const handleCheckout = () => {
-    setOrderSummary({ count, total: subtotal });
-    setCheckedOut(true);
-    clearCart();
+  const handleProceedToCheckout = () => {
+    setIsOpen(false);
+    navigate('/checkout');
   };
 
   return (
@@ -141,34 +133,7 @@ export default function CartDrawer() {
             </div>
 
             <div className="cart-body">
-              {checkedOut ? (
-                <motion.div
-                  className="cart-state-panel"
-                  initial={{ opacity: 0, y: 12 }}
-                  animate={{ opacity: 1, y: 0 }}
-                >
-                  <span className="cart-success-badge" aria-hidden="true">
-                    <CheckCircle2 size={32} />
-                  </span>
-                  <span className="cart-state-hand font-hand">
-                    simulated order placed!
-                  </span>
-                  <h3 className="font-editorial">Your MoodBag is chilling</h3>
-                  <p>
-                    Simulated demo checkout complete for {orderSummary.count}{' '}
-                    {orderSummary.count === 1 ? 'drink' : 'drinks'} (₹
-                    {orderSummary.total}). No payment was charged or collected.
-                  </p>
-                  <button
-                    type="button"
-                    className="btn btn-primary"
-                    onClick={handleContinueShopping}
-                  >
-                    <span>Continue Shopping</span>
-                    <ArrowRight size={16} />
-                  </button>
-                </motion.div>
-              ) : items.length === 0 ? (
+              {items.length === 0 ? (
                 <div className="cart-state-panel">
                   <EmptyBagIllustration />
                   <span className="cart-state-hand font-hand">
@@ -260,7 +225,7 @@ export default function CartDrawer() {
               )}
             </div>
 
-            {items.length > 0 && !checkedOut && (
+            {items.length > 0 && (
               <div className="cart-footer">
                 <div className="cart-summary-rows">
                   <div className="cart-summary-row">
@@ -279,9 +244,9 @@ export default function CartDrawer() {
                   <button
                     type="button"
                     className="btn btn-primary cart-checkout-btn"
-                    onClick={handleCheckout}
+                    onClick={handleProceedToCheckout}
                   >
-                    <span>Checkout (Demo)</span>
+                    <span>Proceed to Checkout</span>
                     <ArrowRight size={16} />
                   </button>
                   <button

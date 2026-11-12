@@ -11,6 +11,8 @@ import MenuPage from './pages/MenuPage';
 import AboutPage from './pages/AboutPage';
 import CampaignPage from './pages/CampaignPage';
 import ContactPage from './pages/ContactPage';
+import CheckoutPage from './pages/CheckoutPage';
+import OrderConfirmationPage from './pages/OrderConfirmationPage';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,6 +37,8 @@ export default function App() {
           <Route path="/collaboration" element={<CampaignPage />} />
           <Route path="/campaign" element={<CampaignPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/order-confirmation" element={<OrderConfirmationPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
         <FooterSection />
